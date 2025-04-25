@@ -1,5 +1,3 @@
-// DOM Elements
-
 const overlay = document.querySelector("#overlay");
 const main = document.querySelector("main");
 const numberSection = document.querySelector("#numbers");
@@ -30,8 +28,6 @@ const totalRaised = document.querySelector("#totalRaised");
 const totalBackers = document.querySelector("#totalBackers");
 
 let pledge = 0;
-
-// Helper Functions
 
 const toggleOverlay = () => overlay.classList.toggle("active");
 
@@ -105,8 +101,6 @@ const updateStock = () => {
   }
 };
 
-// Overlay Close
-
 overlay.addEventListener("click", () => {
   if (mobileNav.classList.contains("active")) {
     toggleNav();
@@ -118,8 +112,6 @@ overlay.addEventListener("click", () => {
     toggleOverlay();
   }
 });
-
-// Mobile Menu
 
 openNav.addEventListener("click", () => {
   mobileNav.style.opacity = 1;
@@ -133,8 +125,6 @@ closeNav.addEventListener("click", () => {
   toggleNav();
 });
 
-// Bookmark Button
-
 bookmark.addEventListener("click", () => {
   bookmark.classList.toggle("active");
   if (bookmark.classList.contains("active")) {
@@ -143,8 +133,6 @@ bookmark.addEventListener("click", () => {
     bookmarkLabel.innerHTML = "Bookmark";
   }
 });
-
-// Modal
 
 openButtons.forEach((b) => {
   b.addEventListener("click", () => {
@@ -165,16 +153,12 @@ closeModal.addEventListener("click", () => {
   toggleOverlay();
 });
 
-// Option Selection
-
 selects.forEach((select) => {
   select.addEventListener("change", () => {
     clearSelect();
     selectNew(select);
   });
 });
-
-// Form Validation
 
 continueButtons.forEach((b) => {
   b.addEventListener("click", (event) => {
@@ -196,8 +180,6 @@ continueButtons.forEach((b) => {
     }
   });
 });
-
-// Confirmation
 
 finalizeButton.addEventListener("click", () => {
   overlay.classList.toggle("inactive");
